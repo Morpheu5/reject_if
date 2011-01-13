@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
 	accepts_nested_attributes_for :contacts,
 		:reject_if => proc { |a| a['content'].blank? },
 		:allow_destroy => true
+	
+	validates :name, :presence => true
 end

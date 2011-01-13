@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 	end
 	
 	def create
-		@user = User.new(params[:id])
+		@user = User.new(params[:user])
 		if @user.save
 			flash[:success] = "User created"
 			redirect_to @user
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
 	
 	def new
 		@user = User.new
+		@user.contacts.build
 	end
 	
 	def edit
