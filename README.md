@@ -25,3 +25,8 @@ Added some rspec tests
     
     Finished in 0.15251 seconds
     2 examples, 1 failure
+
+CASE SOLVED
+===========
+
+I misunderstood the purpose of reject_if, as I thought that if a record is rejected, then it would be deleted from the database too.
