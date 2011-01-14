@@ -1,5 +1,5 @@
 <h1>Users :: show</h1>
-<h2><%= @user.name %></h2>
+<h2><%= @user.name %> (<%= link_to 'edit', edit_user_path(@user) %>)</h2>
 <% @user.contacts.each do |contact| %>
 	<p>&nbsp;&nbsp;&nbsp;<%= contact.id%>) <%= contact.content %></p>
 <% end %>

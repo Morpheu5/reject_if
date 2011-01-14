@@ -22,7 +22,10 @@ class UsersController < ApplicationController
 	
 	def update
 		@user = User.find(params[:id])
-		if @user.update_attributes(params[:user])
+		#if @user.update_attributes(params[:user])
+		puts params[:user].inspect
+		@user.attributes = params[:user]
+		if @user.save
 			flash[:success] = "User updated"
 			redirect_to @user
 		else
